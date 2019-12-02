@@ -4,8 +4,8 @@ import java.awt.event.*;
 /**
  * Write a description of class MyPanel here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (2018315009 황훈태, 2018315039 이윤재,2018315040 김선민)
+ * @version (2019.12.02)
  */
 public class MyPanel extends JPanel implements ActionListener
 { 
@@ -48,8 +48,22 @@ public class MyPanel extends JPanel implements ActionListener
         ta = new JTextArea(10,24);
         this.add(ta);
         this.add(new JScrollPane(ta));
-        
-        
-
+    }
+    public void actionPerformed(ActionEvent e){
+        JButton btn = (JButton)e.getSource();
+        if (btn.getText() == "clear"){
+            ta.setText("");
+            mtfName.setText("");
+            mtfDept.setText("");
+            mtfAddress.setText("");
+        }
+        else if (btn.getText() == "추가"){
+            String name = mtfName.getText();
+            String dept = mtfDept.getText();
+            String address = mtfAddress.getText();
+            String year = schoolYear[cbSchoolYear.getSelectedIndex()];
+            ta.append("이름 : " + name + "\n" + "학과 : "+ dept + "\n" + "학년 : " + year + "\n" + "주소 : "  + address + "\n"
+            + "____________________________" );
+        }
     }
 }
