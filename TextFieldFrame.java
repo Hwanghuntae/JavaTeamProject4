@@ -9,14 +9,14 @@ import java.awt.*;
 public class TextFieldFrame extends JFrame
 {
 
-    public TextFieldFrame()
+    public TextFieldFrame() 
     {
         setTitle("JAVA_CHAP11");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300,150);
         setVisible(true);
         this.setTitle("실습_4");
-        this.add(new MyPanel3());
+        this.add(new MyPanel());
     }
   
 }
